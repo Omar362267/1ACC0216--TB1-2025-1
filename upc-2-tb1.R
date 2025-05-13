@@ -307,3 +307,6 @@ ggplot(reservas_por_pais_top15, aes(x = reorder(country, -n), y = n)) +
   labs(title = "Top 15 países con más reservas", x = "País", y = "Cantidad de reservas") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Guardar el dataset final 
+write.csv(hotel_data_limpio_sin_outliers,"hotel_data_limpio_sin_outliers.csv",row.names=FALSE)
